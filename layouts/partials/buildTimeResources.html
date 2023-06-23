@@ -1,0 +1,9 @@
+{{/* Build-time generated content */}}
+{{/* Generated once, by way of '.IsHome' wrapper */}}
+{{- if .IsHome -}}
+
+    {{- $j := resources.Get "build/pages.json" -}}
+    {{- $noop := ($j | resources.ExecuteAsTemplate "/pages.json" .).RelPermalink -}}
+
+{{- end -}}
+

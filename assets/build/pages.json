@@ -1,0 +1,15 @@
+
+{{ $pages := .Site.Pages }}
+{{ $len := (len $pages) }}
+
+{
+  "articles": [
+    {{ range $i, $e := $pages }}
+      {
+        "title": "{{ .Title }}",
+        "link": "{{ .Permalink }}"
+      }{{ if lt (add $i 1) $len }},{{ end }}
+    {{ end }}
+  ]
+}
+
