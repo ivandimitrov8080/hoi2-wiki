@@ -1,5 +1,0 @@
----
-title: "Dmp"
----
-
-[TABLE]
