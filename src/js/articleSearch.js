@@ -8,7 +8,7 @@ function ArticleSearch() {
   const [fuse, setFuse] = useState(new Fuse([]));
 
   useEffect(() => {
-    fetch("/hoi2-wiki/pages.json").then((response) => response.json()).then((json) => {
+    fetch("/pages.json").then((response) => response.json()).then((json) => {
       setFullArticles(json.articles);
       setArticles(json.articles);
       setFuse(
