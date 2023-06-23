@@ -1,5 +1,12 @@
-{{ define "main" }} {{ range .Pages.ByPublishDate.Reverse }}
-<p>
-  <a class="summary" href="{{ .RelPermalink }}"> {{ .Title }} </a>
-</p>
-{{ end }} {{ end }}
+{{ define "main" }}
+
+<div class="container flex flex-row space-x-4">
+  <div id="article-menu" class="min-w-[20vw] max-w-[20vw]"></div>
+
+  <div class="h-screen overflow-scroll min-w-[80vw]">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </div>
+</div>
+
+{{ end }}
